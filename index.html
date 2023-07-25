@@ -19,45 +19,63 @@
       font-style: normal;
       font-weight: 700;
       line-height: 1.5;
-      letter-spacing: 2px;
       background: radial-gradient(35.33% 73.78% at 30.78% 25.53%, rgba(197, 30, 43, 0.30) 0%, rgba(93, 144, 142, 0.00) 100%), radial-gradient(30.30% 56.41% at 77.15% 23.55%, #2C3892 0%, rgba(35, 21, 84, 0.00) 100%), #151517;; 
       background-repeat: no-repeat;
       object-fit: cover;
       object-position: 100vh;
     }
+    .red-dot {
+          position: relative;
+          background-color: #f0f0f0; /* Цвет фона контейнера */
+        }
+        
+        /* Стилизуем псевдоэлемент ::before */
+        .red-dot::before {
+          content: ""; /* Обязательное свойство для псевдоэлемента */
+          position: absolute;
+          top: 1%;
+          left: 90%;
+          transform: translate(-50%, -50%);
+          width: 5px;
+          height: 5px;
+          background-color: red; /* Красный цвет точки */
+          border-radius: 50%; /* Делаем точку круглой */
+        }
   </style>
 </head>
 <body>
-  <div class="container mx-auto">
+  <div class="container px-20">
     <header class="flex justify-between items-center my-10">
-        <a class="pr-4 border-s-indigo-500 text-white" href="#"><img src="/Logo.svg" alt="main-logo"></a>
+        <a class="border-s-indigo-500 text-white" href="#"><img src="Logo.svg" alt="main-logo"></a>
 
-        <nav class="flex gap-10 text-white">
+        <nav class="flex justify-between items-center flex gap-10 pl-10">
           <ul class="flex gap-10 text-white items-center font-normal" >
             <li class=""><a href="#">About Us</a></li>
             <li class=""><a href="#">Roadmap</a></li>
             <li class=""><a href="#">Donate</a></li>
             <li class=""><a href="#">Register</a></li>
           </ul>
-        </nav>
 
-        <div class="text-white flex justify-between gap-10">
-          <a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M12 6V22M12 6H8.46429C7.94332 6 7.4437 5.78929 7.07533 5.41421C6.70695 5.03914 6.5 4.53043 6.5 4C6.5 3.46957 6.70695 2.96086 7.07533 2.58579C7.4437 2.21071 7.94332 2 8.46429 2C11.2143 2 12 6 12 6ZM12 6H15.5357C16.0567 6 16.5563 5.78929 16.9247 5.41421C17.293 5.03914 17.5 4.53043 17.5 4C17.5 3.46957 17.293 2.96086 16.9247 2.58579C16.5563 2.21071 16.0567 2 15.5357 2C12.7857 2 12 6 12 6ZM20 11V18.8C20 19.9201 20 20.4802 19.782 20.908C19.5903 21.2843 19.2843 21.5903 18.908 21.782C18.4802 22 17.9201 22 16.8 22L7.2 22C6.07989 22 5.51984 22 5.09202 21.782C4.71569 21.5903 4.40973 21.2843 4.21799 20.908C4 20.4802 4 19.9201 4 18.8V11M2 7.6L2 9.4C2 9.96005 2 10.2401 2.10899 10.454C2.20487 10.6422 2.35785 10.7951 2.54601 10.891C2.75992 11 3.03995 11 3.6 11L20.4 11C20.9601 11 21.2401 11 21.454 10.891C21.6422 10.7951 21.7951 10.6422 21.891 10.454C22 10.2401 22 9.96005 22 9.4V7.6C22 7.03995 22 6.75992 21.891 6.54601C21.7951 6.35785 21.6422 6.20487 21.454 6.10899C21.2401 6 20.9601 6 20.4 6L3.6 6C3.03995 6 2.75992 6 2.54601 6.10899C2.35785 6.20487 2.20487 6.35785 2.10899 6.54601C2 6.75992 2 7.03995 2 7.6Z" stroke="white" stroke-opacity="0.8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>   
-          </a>
-          
-          <a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M15.0505 9H5.5C4.11929 9 3 7.88071 3 6.5C3 5.11929 4.11929 4 5.5 4H15.0505M8.94949 20H18.5C19.8807 20 21 18.8807 21 17.5C21 16.1193 19.8807 15 18.5 15H8.94949M3 17.5C3 19.433 4.567 21 6.5 21C8.433 21 10 19.433 10 17.5C10 15.567 8.433 14 6.5 14C4.567 14 3 15.567 3 17.5ZM21 6.5C21 8.433 19.433 10 17.5 10C15.567 10 14 8.433 14 6.5C14 4.567 15.567 3 17.5 3C19.433 3 21 4.567 21 6.5Z" stroke="white" stroke-opacity="0.8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-        </div>
-       
-        <div class="flex justify-between text-align">
-            <button class="mx-3 p-1.5 border border-stone-200 rounded-3xl bg-#3772FF;">
-              <a href="#" class="flex justify-between items-center">
+          <div class="text-white flex justify-between gap-10">
+            <a href="#" class="">
+              <div class="red-dot"></div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 6V22M12 6H8.46429C7.94332 6 7.4437 5.78929 7.07533 5.41421C6.70695 5.03914 6.5 4.53043 6.5 4C6.5 3.46957 6.70695 2.96086 7.07533 2.58579C7.4437 2.21071 7.94332 2 8.46429 2C11.2143 2 12 6 12 6ZM12 6H15.5357C16.0567 6 16.5563 5.78929 16.9247 5.41421C17.293 5.03914 17.5 4.53043 17.5 4C17.5 3.46957 17.293 2.96086 16.9247 2.58579C16.5563 2.21071 16.0567 2 15.5357 2C12.7857 2 12 6 12 6ZM20 11V18.8C20 19.9201 20 20.4802 19.782 20.908C19.5903 21.2843 19.2843 21.5903 18.908 21.782C18.4802 22 17.9201 22 16.8 22L7.2 22C6.07989 22 5.51984 22 5.09202 21.782C4.71569 21.5903 4.40973 21.2843 4.21799 20.908C4 20.4802 4 19.9201 4 18.8V11M2 7.6L2 9.4C2 9.96005 2 10.2401 2.10899 10.454C2.20487 10.6422 2.35785 10.7951 2.54601 10.891C2.75992 11 3.03995 11 3.6 11L20.4 11C20.9601 11 21.2401 11 21.454 10.891C21.6422 10.7951 21.7951 10.6422 21.891 10.454C22 10.2401 22 9.96005 22 9.4V7.6C22 7.03995 22 6.75992 21.891 6.54601C21.7951 6.35785 21.6422 6.20487 21.454 6.10899C21.2401 6 20.9601 6 20.4 6L3.6 6C3.03995 6 2.75992 6 2.54601 6.10899C2.35785 6.20487 2.20487 6.35785 2.10899 6.54601C2 6.75992 2 7.03995 2 7.6Z" stroke="white" stroke-opacity="0.8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>   
+            </a>
+            
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M15.0505 9H5.5C4.11929 9 3 7.88071 3 6.5C3 5.11929 4.11929 4 5.5 4H15.0505M8.94949 20H18.5C19.8807 20 21 18.8807 21 17.5C21 16.1193 19.8807 15 18.5 15H8.94949M3 17.5C3 19.433 4.567 21 6.5 21C8.433 21 10 19.433 10 17.5C10 15.567 8.433 14 6.5 14C4.567 14 3 15.567 3 17.5ZM21 6.5C21 8.433 19.433 10 17.5 10C15.567 10 14 8.433 14 6.5C14 4.567 15.567 3 17.5 3C19.433 3 21 4.567 21 6.5Z" stroke="white" stroke-opacity="0.8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </nav>
+        
+        <div>
+          <div class="flex">
+            <button class="px-5 mr-2 border border-stone-500 rounded-full bg-#3772FF; mr-10">
+              <a href="#" class="px-4 flex justify-between items-center">
                   <svg 
                     width="24" 
                     height="24" 
@@ -74,7 +92,7 @@
                     stroke-linejoin="round"
                   />
                </svg>
-              <span class="p-2 text-white font-normal">Join a call</span>
+              <span class="text-white font-normal">Join a call</span>
               </a>
             </button>
             <button class="p-2 px-5 bg-blue-600 border border-blue-600 rounded-3xl ">
@@ -91,6 +109,8 @@
                 <span class="p-2 text-white font-normal">Sign in</span>
               </a>
             </button>
+        </div>
+        
       
         </div> 
       </header>
