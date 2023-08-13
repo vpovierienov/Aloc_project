@@ -127,3 +127,21 @@ header {
     margin: 0 auto;
     }
 }
+
+/*Footer section*/
+
+.footer {
+    height: 120px;
+    background: #151517;
+    color: #f0f0f0;
+}
+
+.footer__section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__icons  a{
+    padding: 1rem;
+    color: #ffffff;
+}
