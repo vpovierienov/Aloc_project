@@ -1,0 +1,21 @@
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+
+a, a:link, a:visited  {
+    text-decoration: none;
+}
+
+ul, ul li {
+	list-style: none;
+}

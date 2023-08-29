@@ -1,191 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link 
-    rel="stylesheet" 
-    href="/main.css"
-  />
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins:wght@500&display=swap');
-    body {
-      color: rgba(255, 255, 255, 0.80);
-      text-align: center;
-      font-family: 'Inter';
-      font-size: 14px;
-      font-style: normal;
-      font-weight: bolder;
-      letter-spacing: 1px;
-      line-height: 1.5;
-      background: radial-gradient(35.33% 73.78% at 30.78% 25.53%, rgba(197, 30, 43, 0.30) 0%, rgba(93, 144, 142, 0.00) 100%), radial-gradient(30.30% 56.41% at 77.15% 23.55%, #2C3892 0%, rgba(35, 21, 84, 0.00) 100%), #151517;; 
-      background-repeat: no-repeat;
-      object-fit: cover;
-      object-position: 100vh;
-    }
-    .red-dot {
-          position: relative;
-          background-color: #f0f0f0; 
-        }
-        
-        
-        .red-dot::before {
-          content: ""; 
-          position: absolute;
-          top: 1%;
-          left: 90%;
-          transform: translate(-50%, -50%);
-          width: 5px;
-          height: 5px;
-          background-color: red; 
-          border-radius: 50%; 
-        }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Aloc videoservice</title>
 </head>
 <body>
-  <div class="container mx-auto">
-    <header class="flex justify-between items-center mt-10 px-15">
-        <a class="border-s-indigo-500 text-white" href="#"><img src="Logo.svg" alt="main-logo"></a>
-
-        <nav class="flex justify-between items-center flex gap-10">
-          <ul class="flex gap-10 text-white items-center font-normal" >
-            <li class=""><a href="#">About Us</a></li>
-            <li class=""><a href="#">Roadmap</a></li>
-            <li class=""><a href="#">Donate</a></li>
-            <li class=""><a href="#">Register</a></li>
-          </ul>
-
-          <div class="text-white flex justify-between gap-10">
-            <a href="#" class="">
-              <div class="red-dot"></div>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M12 6V22M12 6H8.46429C7.94332 6 7.4437 5.78929 7.07533 5.41421C6.70695 5.03914 6.5 4.53043 6.5 4C6.5 3.46957 6.70695 2.96086 7.07533 2.58579C7.4437 2.21071 7.94332 2 8.46429 2C11.2143 2 12 6 12 6ZM12 6H15.5357C16.0567 6 16.5563 5.78929 16.9247 5.41421C17.293 5.03914 17.5 4.53043 17.5 4C17.5 3.46957 17.293 2.96086 16.9247 2.58579C16.5563 2.21071 16.0567 2 15.5357 2C12.7857 2 12 6 12 6ZM20 11V18.8C20 19.9201 20 20.4802 19.782 20.908C19.5903 21.2843 19.2843 21.5903 18.908 21.782C18.4802 22 17.9201 22 16.8 22L7.2 22C6.07989 22 5.51984 22 5.09202 21.782C4.71569 21.5903 4.40973 21.2843 4.21799 20.908C4 20.4802 4 19.9201 4 18.8V11M2 7.6L2 9.4C2 9.96005 2 10.2401 2.10899 10.454C2.20487 10.6422 2.35785 10.7951 2.54601 10.891C2.75992 11 3.03995 11 3.6 11L20.4 11C20.9601 11 21.2401 11 21.454 10.891C21.6422 10.7951 21.7951 10.6422 21.891 10.454C22 10.2401 22 9.96005 22 9.4V7.6C22 7.03995 22 6.75992 21.891 6.54601C21.7951 6.35785 21.6422 6.20487 21.454 6.10899C21.2401 6 20.9601 6 20.4 6L3.6 6C3.03995 6 2.75992 6 2.54601 6.10899C2.35785 6.20487 2.20487 6.35785 2.10899 6.54601C2 6.75992 2 7.03995 2 7.6Z" stroke="white" stroke-opacity="0.8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>   
-            </a>
-            
+    <div class="container mx-auto">
+        <header class="flex justify-between items-center pt-10 font-bold mb-10">
             <a href="#">
+                <img src="/aloc-logo.svg.svg" alt="aloc-logo">
+            </a>
+
+            <nav>
+                <nav>
+                    <ul class="flex gap-[40px]">
+                      <li>About Us</li>
+                      <li>Road map</li>
+                      <li>Donate</li>
+                      <li>Register</li>
+                    </ul>
+                  </nav>
+            </nav>
+
+            <div class="flex gap-[40px]">
+                <button
+                  class="
+                  relative
+                  after:absolute after:top-[-1px] after:right-[-1px]
+                  after:content-[' '] after:w-[5px] after:h-[5px] after:rounded-[50%]
+                after:bg-red-600
+                  "
+                >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 6V22M12 6H8.46429C7.94332 6 7.4437 5.78929 7.07533 5.41421C6.70695 5.03914 6.5 4.53043 6.5 4C6.5 3.46957 6.70695 2.96086 7.07533 2.58579C7.4437 2.21071 7.94332 2 8.46429 2C11.2143 2 12 6 12 6ZM12 6H15.5357C16.0567 6 16.5563 5.78929 16.9247 5.41421C17.293 5.03914 17.5 4.53043 17.5 4C17.5 3.46957 17.293 2.96086 16.9247 2.58579C16.5563 2.21071 16.0567 2 15.5357 2C12.7857 2 12 6 12 6ZM20 11V18.8C20 19.9201 20 20.4802 19.782 20.908C19.5903 21.2843 19.2843 21.5903 18.908 21.782C18.4802 22 17.9201 22 16.8 22L7.2 22C6.07989 22 5.51984 22 5.09202 21.782C4.71569 21.5903 4.40973 21.2843 4.21799 20.908C4 20.4802 4 19.9201 4 18.8V11M2 7.6L2 9.4C2 9.96005 2 10.2401 2.10899 10.454C2.20487 10.6422 2.35785 10.7951 2.54601 10.891C2.75992 11 3.03995 11 3.6 11L20.4 11C20.9601 11 21.2401 11 21.454 10.891C21.6422 10.7951 21.7951 10.6422 21.891 10.454C22 10.2401 22 9.96005 22 9.4V7.6C22 7.03995 22 6.75992 21.891 6.54601C21.7951 6.35785 21.6422 6.20487 21.454 6.10899C21.2401 6 20.9601 6 20.4 6L3.6 6C3.03995 6 2.75992 6 2.54601 6.10899C2.35785 6.20487 2.20487 6.35785 2.10899 6.54601C2 6.75992 2 7.03995 2 7.6Z" stroke="white" stroke-opacity="0.8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                </button>
+
+                <button>       
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path d="M15.0505 9H5.5C4.11929 9 3 7.88071 3 6.5C3 5.11929 4.11929 4 5.5 4H15.0505M8.94949 20H18.5C19.8807 20 21 18.8807 21 17.5C21 16.1193 19.8807 15 18.5 15H8.94949M3 17.5C3 19.433 4.567 21 6.5 21C8.433 21 10 19.433 10 17.5C10 15.567 8.433 14 6.5 14C4.567 14 3 15.567 3 17.5ZM21 6.5C21 8.433 19.433 10 17.5 10C15.567 10 14 8.433 14 6.5C14 4.567 15.567 3 17.5 3C19.433 3 21 4.567 21 6.5Z" stroke="white" stroke-opacity="0.8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-            </a>
-          </div>
-        </nav>
-        
-        <div class="">
-          <div class="flex mr-5">
-            <button class="px-5 mr-2 border border-stone-500 rounded-full bg-#3772FF;">
-              <a href="#" class="px-4 flex justify-between items-center">
-                  <svg 
-                    width="24" 
-                    height="24" 
-                    viewBox="0 0 24 24" 
-                    fill="none" 
+              </button>
+            </div>
+
+            <div class="flex gap-[40px] items-center">
+                <button
+                  class="
+                  flex gap-[13px] items-center
+                  py-[13px] px-[30px] rounded-[50px] 
+                  border border-slate-50/25
+                  "
+                >
+                  <span>Join a Call</span>
+                </button>
+                <a
+                  class="
+                  flex gap-[13px] items-center
+                  py-[13px] px-[30px] rounded-[50px] 
+                  border border-slate-50/25 bg-blue-500
+                  "
+                  href="/join"
+                >
+                  <span>Join In</span>
+                </a>
+            </div>
+        </header>
+       
+        <!--Main section-->
+
+        <section> 
+
+        </section>
+
+        <!--Footer section-->
+
+        <footer class="flex flex-col justify-between">
+            <section class="flex justify-between">
+              <a class="header__logo" href="#"><img src="aloc-logo.svg.svg" alt="main-logo"></a>
+              <div class="flex justify-between">
+                <button class="flex gap-1 items-center
+                py-1 px-5 border rounded-3xl mr-5">
+                  <svg width="24" 
+                  height="24" 
+                  viewBox="0 0 24 24"
+                   fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    >
-                    <path 
-                    d="M20.9996 8V3M20.9996 3H15.9996M20.9996 3L14.9996 9M10.2266 13.8631C9.02506 12.6615 8.07627 11.3028 7.38028 9.85323C7.32041 9.72854 7.29048 9.66619 7.26748 9.5873C7.18576 9.30695 7.24446 8.96269 7.41447 8.72526C7.46231 8.65845 7.51947 8.60129 7.63378 8.48698C7.98338 8.13737 8.15819 7.96257 8.27247 7.78679C8.70347 7.1239 8.70347 6.26932 8.27247 5.60643C8.15819 5.43065 7.98338 5.25585 7.63378 4.90624L7.43891 4.71137C6.90747 4.17993 6.64174 3.91421 6.35636 3.76987C5.7888 3.4828 5.11854 3.4828 4.55098 3.76987C4.2656 3.91421 3.99987 4.17993 3.46843 4.71137L3.3108 4.86901C2.78117 5.39863 2.51636 5.66344 2.31411 6.02348C2.08969 6.42298 1.92833 7.04347 1.9297 7.5017C1.93092 7.91464 2.01103 8.19687 2.17124 8.76131C3.03221 11.7947 4.65668 14.6571 7.04466 17.045C9.43264 19.433 12.295 21.0575 15.3284 21.9185C15.8928 22.0787 16.1751 22.1588 16.588 22.16C17.0462 22.1614 17.6667 22 18.0662 21.7756C18.4263 21.5733 18.6911 21.3085 19.2207 20.7789L19.3783 20.6213C19.9098 20.0898 20.1755 19.8241 20.3198 19.5387C20.6069 18.9712 20.6069 18.3009 20.3198 17.7333C20.1755 17.448 19.9098 17.1822 19.3783 16.6508L19.1835 16.4559C18.8339 16.1063 18.6591 15.9315 18.4833 15.8172C17.8204 15.3862 16.9658 15.3862 16.3029 15.8172C16.1271 15.9315 15.9523 16.1063 15.6027 16.4559C15.4884 16.5702 15.4313 16.6274 15.3644 16.6752C15.127 16.8453 14.7828 16.904 14.5024 16.8222C14.4235 16.7992 14.3612 16.7693 14.2365 16.7094C12.7869 16.0134 11.4282 15.0646 10.2266 13.8631Z" 
-                    stroke="white" 
-                    stroke-opacity="0.8" 
-                    stroke-width="2" 
-                    stroke-linecap="round" 
-                    stroke-linejoin="round"
-                  />
-               </svg>
-              <span class="text-white font-normal">Join a call</span>
-              </a>
-            </button>
-
-            <button class="p-1.5 px-5 bg-blue-600 border border-blue-600 rounded-3xl ">
-              <a href="#" class="flex justify-between items-center">
-                <svg width="24" 
-                height="24" 
-                viewBox="0 0 24 24"
-                 fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
                   >
-                <path d="M20 21C20 19.6044 20 18.9067 19.8278 18.3389C19.44 17.0605 18.4395 16.06 17.1611 15.6722C16.5933 15.5 15.8956 15.5 14.5 15.5H9.5C8.10444 15.5 7.40665 15.5 6.83886 15.6722C5.56045 16.06 4.56004 17.0605 4.17224 18.3389C4 18.9067 4 19.6044 4 21M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z" stroke="white" stroke-opacity="0.8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                
-                <span class="p-2 text-white font-normal">Sign in</span>
-              </a>
-            </button>
-        </div>
-        
+                  <path d="M20 21C20 19.6044 20 18.9067 19.8278 18.3389C19.44 17.0605 18.4395 16.06 17.1611 15.6722C16.5933 15.5 15.8956 15.5 14.5 15.5H9.5C8.10444 15.5 7.40665 15.5 6.83886 15.6722C5.56045 16.06 4.56004 17.0605 4.17224 18.3389C4 18.9067 4 19.6044 4 21M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z" stroke="white" stroke-opacity="0.8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  
+                  <a class="font-bold" href="">Join a call</a>
+                </button>
+                <svg class="icons" xmlns="http://www.w3.org/2000/svg" width="190" height="50" viewBox="0 0 190 50" fill="none">
+                  <rect x="140.75" y="0.75" width="48.5" height="48.5" rx="24.25" stroke="white" stroke-opacity="0.15" stroke-width="1.5"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M170.32 33.4823C170.588 33.6722 170.934 33.7197 171.242 33.6031C171.551 33.4856 171.777 33.2223 171.846 32.9031C172.57 29.4998 174.327 20.8859 174.986 17.7901C175.036 17.5568 174.952 17.3143 174.769 17.1585C174.586 17.0026 174.332 16.9576 174.105 17.0418C170.611 18.3351 159.85 22.3725 155.452 24C155.173 24.1033 154.991 24.3716 155 24.6658C155.01 24.9608 155.209 25.2166 155.494 25.3024C157.467 25.8924 160.056 26.7132 160.056 26.7132C160.056 26.7132 161.266 30.3673 161.897 32.2256C161.976 32.4589 162.159 32.6423 162.399 32.7056C162.639 32.7681 162.896 32.7023 163.075 32.5331C164.088 31.5765 165.655 30.0973 165.655 30.0973C165.655 30.0973 168.632 32.2798 170.32 33.4823ZM161.145 26.2516L162.544 30.8665L162.855 27.944C162.855 27.944 168.261 23.0683 171.342 20.2892C171.432 20.2076 171.445 20.0709 171.37 19.9751C171.296 19.8792 171.159 19.8567 171.057 19.9217C167.485 22.2025 161.145 26.2516 161.145 26.2516Z" fill="white" fill-opacity="0.8"/>
+                  <rect x="70.75" y="0.75" width="48.5" height="48.5" rx="24.25" stroke="white" stroke-opacity="0.15" stroke-width="1.5"/>
+                  <path d="M95 16.8025C97.67 16.8025 97.9867 16.8125 99.0417 16.8608C101.752 16.9842 103.017 18.27 103.141 20.96C103.189 22.0142 103.198 22.3308 103.198 25.0008C103.198 27.6717 103.188 27.9875 103.141 29.0417C103.017 31.7292 101.754 33.0175 99.0417 33.1408C97.9867 33.1892 97.6717 33.1992 95 33.1992C92.33 33.1992 92.0133 33.1892 90.9592 33.1408C88.2425 33.0167 86.9833 31.725 86.86 29.0408C86.8117 27.9867 86.8017 27.6708 86.8017 25C86.8017 22.33 86.8125 22.0142 86.86 20.9592C86.9842 18.27 88.2467 16.9833 90.9592 16.86C92.0142 16.8125 92.33 16.8025 95 16.8025ZM95 15C92.2842 15 91.9442 15.0117 90.8775 15.06C87.2458 15.2267 85.2275 17.2417 85.0608 20.8767C85.0117 21.9442 85 22.2842 85 25C85 27.7158 85.0117 28.0567 85.06 29.1233C85.2267 32.755 87.2417 34.7733 90.8767 34.94C91.9442 34.9883 92.2842 35 95 35C97.7158 35 98.0567 34.9883 99.1233 34.94C102.752 34.7733 104.775 32.7583 104.939 29.1233C104.988 28.0567 105 27.7158 105 25C105 22.2842 104.988 21.9442 104.94 20.8775C104.777 17.2492 102.759 15.2275 99.1242 15.0608C98.0567 15.0117 97.7158 15 95 15ZM95 19.865C92.1642 19.865 89.865 22.1642 89.865 25C89.865 27.8358 92.1642 30.1358 95 30.1358C97.8358 30.1358 100.135 27.8367 100.135 25C100.135 22.1642 97.8358 19.865 95 19.865ZM95 28.3333C93.1592 28.3333 91.6667 26.8417 91.6667 25C91.6667 23.1592 93.1592 21.6667 95 21.6667C96.8408 21.6667 98.3333 23.1592 98.3333 25C98.3333 26.8417 96.8408 28.3333 95 28.3333ZM100.338 18.4625C99.675 18.4625 99.1375 19 99.1375 19.6625C99.1375 20.325 99.675 20.8625 100.338 20.8625C101.001 20.8625 101.537 20.325 101.537 19.6625C101.537 19 101.001 18.4625 100.338 18.4625Z" fill="white" fill-opacity="0.8"/>
+                  <rect x="0.75" y="0.75" width="48.5" height="48.5" rx="24.25" stroke="white" stroke-opacity="0.15" stroke-width="1.5"/>
+                  <path d="M35 18.894C34.2642 19.2153 33.4733 19.4324 32.6434 19.53C33.4905 19.0301 34.1412 18.2386 34.4475 17.2953C33.6546 17.7583 32.7765 18.0944 31.8418 18.2755C31.0934 17.4904 30.027 17 28.8468 17C26.5808 17 24.7435 18.8084 24.7435 21.0391C24.7435 21.3557 24.7798 21.664 24.8498 21.9596C21.4396 21.7912 18.4162 20.1831 16.3924 17.7393C16.0392 18.3358 15.8368 19.0296 15.8368 19.7699C15.8368 21.1713 16.5612 22.4076 17.6622 23.1319C16.9896 23.111 16.3569 22.9293 15.8037 22.6268C15.8032 22.6436 15.8032 22.6605 15.8032 22.6775C15.8032 24.6345 17.2176 26.267 19.0947 26.6383C18.7504 26.7306 18.3879 26.7799 18.0137 26.7799C17.7493 26.7799 17.4923 26.7546 17.2417 26.7075C17.7639 28.3122 19.2792 29.48 21.0748 29.5125C19.6705 30.5959 17.9013 31.2417 15.9788 31.2417C15.6476 31.2417 15.321 31.2225 15 31.1852C16.8159 32.3313 18.9727 33 21.2899 33C28.8372 33 32.9645 26.8452 32.9645 21.5074C32.9645 21.3323 32.9605 21.1581 32.9526 20.9848C33.7542 20.4154 34.4499 19.7041 35 18.894Z" fill="white" fill-opacity="0.8"/>
+                  </svg>
+              </div>
+            </section>
+    
+            <section class="">
+              <nav class="">
+                <ul class="flex" >
+                  <li class="nav__item"><a href="#">Terms and Conditions</a></li>
       
-        </div> 
-      </header>
+                  <li class="nav__item"><a href="#">Privacy policy</a></li>
+      
+                  <li class="nav__item"><a href="#">About Us</a></li>
+      
+                  <li class="nav__item"><a href="#">Roadmap</a></li>
+      
+                  <li class="nav__item"><a href="#">Donate</a></li>
+                 
+                  <li class="nav__item"><a href="#">Register</a></li>
+                </ul>
+              </nav>
+      
+              <p class="footer__rights">
+                Copyright(c) 2023. All rights reserved
+              </p>
+    
+            </section>
+          </footer>
 
-<article
-    className="
-    row-span-5
-    border rounded-[25px] border-slate-50/25 drop-shadow-xl
-    bg-main/40
-    pb-[80px]
-    "
->
-    <header className="flex items-center gap-[10px] p-[20px] mb-[15px]">
-      <div className="bg-red-600 rounded-[100px] p-[7px]">
-      </div>
-      <span
-        className="
-        font-bold text-[20px] text-white
-        "
-      >
-        Try New Feature
-      </span>
-    </header>
-
-    <div className="mx-[35px] text-center">
-      <h1
-        className="
-        font-black text-[30px] text-transparent
-        mb-[20px]
-        bg-gradient-to-r from-[#FF343F] to-[#FFE853] bg-clip-text
-      "
-      >
-        Around The Globe, Just Pick Where
-      </h1>
-      <p className="text-zinc-50/60">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut
-        dolor elit. In ornare posuere.
-      </p>
     </div>
-    <div>
-      <img
-        src="/Explore-Map.png"
-        alt="Explore Map"
-      />
-    </div>
-    <div
-      className="
-      mt-[-20px]
-      flex flex-col gap-[5px] justify-center items-center
-      "
-    >
-      <a
-        className="
-        font-bold
-        flex gap-[13px] items-center
-        py-[13px] px-[30px] rounded-[50px] 
-        border border-slate-50/25 bg-blue-500
-        "
-        href="/world"
-      >
-        <span> Explore The World</span>
-      </a>
-      <span>or</span>
-      <button
-        className="
-        flex gap-[13px] items-center
-        font-bold underline decoration-solid
-        "
-      >
-        <span>Bring Friends With You</span>
-      </button>
-    </div>
-  </article>
-</div>
 </body>
 </html>
